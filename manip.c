@@ -58,22 +58,22 @@ void main()
 
 void display(int num)
 {
-       int i,a=128;
-	     for(i=0;i<8;i++)
-	     {
-	       if(a>num)
-	         {
-		        	printf("0");
-	         }
-		     else
-		       {
-			        printf("1");
-			        num=num%a;
-		        }
-		      if(i==3)
-		          printf(" ");
-		      a=a/2;
-	      }
+    int i,a=128;
+    for(i=0;i<8;i++)
+    {
+    	if(a>num)
+    	{
+    	    printf("0");
+	}
+	else
+        {
+            printf("1");
+	    num=num%a;
+        }
+        if(i==3)
+            printf(" ");
+        a=a/2;
+    }
 }
 
 unsigned char set_1(int num,int i)
