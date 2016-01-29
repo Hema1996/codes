@@ -7,7 +7,7 @@ unsigned char toggle_except(int ,int );
 unsigned char rotate_left(int);
 unsigned char rotate_right(int);
 unsigned char swap(int);
-void main() 
+int main() 
 {
    int n,i,r;
    printf("Enter number and index:");
@@ -53,9 +53,8 @@ void main()
    display(r);
    printf("\t Decimal Equivalant: %d",r);
    
+   return 0;
 }
-
-
 void display(int num)
 {
     int i,a=128;
@@ -75,31 +74,26 @@ void display(int num)
         a=a/2;
     }
 }
-
 unsigned char set_1(int num,int i)
 {
     num|=1<<i;
     return(num);
 }
-
 unsigned char set_0(int num,int i)
 {
     num = num &(~(1<<i));
     return(num);
 }
-
 unsigned char toggle(int num,int i)
 {
     num^=(1<<i); 
     return(num);
 }
-
 unsigned char toggle_except(int num,int i)
 {
     num=(~num)^(1<<i);
     return(num);
 }
-
 unsigned char rotate_right(int num)
 {
     num=(num>>1)|(num<<7);
@@ -110,7 +104,6 @@ unsigned char rotate_left(int num)
     num=(num<<1)|(num>>7); 
     return(num);
 }
-
 unsigned char swap(int num)
 {
     num=(num<<4)|(num>>4);
