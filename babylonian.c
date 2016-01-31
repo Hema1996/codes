@@ -3,7 +3,8 @@ unsigned int squareRoot(int n)
 {
   int a=n;
   int b=1;
-  while(a>b)
+  float d=0.00001;
+  while(a-b>d)
   {
     a=(a+b)/2;
     b=n/a;
